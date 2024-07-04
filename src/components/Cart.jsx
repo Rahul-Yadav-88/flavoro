@@ -3,14 +3,14 @@ import { IoMdClose } from "react-icons/io";
 import ItemCart from '../components/ItemCart';
 import { useSelector } from 'react-redux';
 import {FaShoppingCart} from 'react-icons/fa'
-
+import { useNavigate } from 'react-router-dom';
 const Cart = () => {
   const [activeCart, setActiveCart] = useState(false);
   const cartItems = useSelector((state) => state.cart.cart);
 
   const totalQty = cartItems.reduce((acc, item) => acc + item.qty, 0);
   const totalPrice = cartItems.reduce((acc, item) => acc + item.price * item.qty, 0);
-
+const navigate = useNavigate();
   return (
     <>
       <div

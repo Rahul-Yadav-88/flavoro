@@ -36,5 +36,4 @@ const FoodCard = ({id, name, price, desc, img, rating, handleToast}) => {
     </div>
   );
 };
-
 export default FoodCard;
